@@ -14,16 +14,16 @@ export const site = {
   /** Index of the character in `displayWord` that the face illustration replaces. */
   faceLetterIndex: 5, // P-O-R-T-F-[O]-L-I-O
 
-  eyebrow: 'DESIGNER / ILLUSTRATOR',
+  eyebrow: 'OPERATIONS / PLATFORM SPECIALIST',
   year: '2026',
 
-  firstName: 'GIREESH',
+  firstName: 'Mohammed Usama M',
   /**
    * The signature form the hero reveals as the visitor starts scrolling —
    * deliberately separate from `firstName`, which the introduction, the poster
    * and the contact note all use.
    */
-  signatureName: 'G K REDDY',
+  signatureName: 'USAMA.VJM',
   /** Leave empty until a surname is supplied — the black strip adapts either way. */
   lastName: '',
 
@@ -41,11 +41,11 @@ export const site = {
 
   intro: {
     heading: 'HELLO',
-    lede: "Hi, I'm GIREESH.",
+    lede: "Hi, I'm MOHAMMED USAMA M.",
     paragraphs: [
-      'I design digital experiences that are not just beautiful, but meaningful.',
-      "I've worked on dashboards, marketplaces, SaaS platforms, and interactive websites that solve real problems and deliver real impact.",
-      "Right now I'm focused on building products that are simple, intuitive and powerful for users across industries.",
+      'Performance-driven Operations Specialist with over 4 years of experience combining YouTube platform management with high-speed logistics data support.',
+      'On the digital media side, I manage end-to-end channel workflows, ensure strict policy compliance, and utilize analytics to optimize platform visibility.',
+      'On the logistics side, I demonstrate exceptional data integrity by managing 200+ CRM records daily and resolving 60+ critical support tickets while consistently exceeding operational targets by 130%.',
     ],
   },
 
@@ -53,12 +53,8 @@ export const site = {
     heading: 'EDUCATION',
     items: [
       {
-        degree: 'Master of Science in International Business',
-        detail: 'Montpellier Business School, France | 2024 – 2026',
-      },
-      {
-        degree: 'Bachelor of Technology in Mechanical Engineering',
-        detail: 'Jawaharlal Nehru Technological University | 2019 – 2023',
+        degree: 'B.Sc. Software Computer Science',
+        detail: 'Islamiah College (Thiruvalluvar University) | 2016 – 2019',
       },
     ],
   },
@@ -67,33 +63,19 @@ export const site = {
     heading: 'SKILLS',
     /**
      * Three columns, two rows, in file order as supplied.
-     *
-     * Each file carries its own background treatment and it is preserved
-     * exactly: Photoshop, Premiere Pro, Claude and Procreate are rounded
-     * tiles, Figma is a square black tile, Blender is a bare glyph. Nothing
-     * is recoloured, restyled or given an invented container — the only
-     * processing was trimming the flat padding the export files carried, so
-     * they sit on paper instead of in a white box.
-     *
-     * `scale` is an optical nudge, not a resize: a bare glyph and a filled
-     * tile of identical height do not read as the same size.
      */
     items: [
-      { label: 'Photoshop', short: 'Ps', src: '/assets/skills/photoshop.png', scale: 1 },
-      { label: 'Premiere Pro', short: 'Pr', src: '/assets/skills/premiere-pro.png', scale: 1 },
-      { label: 'Figma', short: 'Fg', src: '/assets/skills/figma.png', scale: 0.96 },
-      { label: 'Claude', short: 'Cl', src: '/assets/skills/claude.png', scale: 1 },
-      { label: 'Procreate', short: 'Pc', src: '/assets/skills/procreate.png', scale: 1 },
-      { label: 'Blender', short: 'Bl', src: '/assets/skills/blender.png', scale: 1.06 },
+      { label: 'Platform Operations', short: 'PO', src: '/assets/skills/photoshop.png', scale: 1 },
+      { label: 'YouTube Analytics', short: 'YT', src: '/assets/skills/premiere-pro.png', scale: 1 },
+      { label: 'CRM Management', short: 'CRM', src: '/assets/skills/figma.png', scale: 0.96 },
+      { label: 'SEO & Metadata', short: 'SEO', src: '/assets/skills/claude.png', scale: 1 },
+      { label: 'Logistics Operations', short: 'LO', src: '/assets/skills/procreate.png', scale: 1 },
+      { label: 'Quality Assurance', short: 'QA', src: '/assets/skills/blender.png', scale: 1.06 },
     ] as { label: string; short: string; src: string | null; scale: number }[],
   },
 
   /**
    * THE STU — abbreviated on purpose. Do not expand it.
-   *
-   * Every angle, drop, shadow weight and slant of handwriting is a value here
-   * rather than a random seed, because randomness reads as a bug and a
-   * decision reads as a hand. Rotations follow the brief: -5 / +1.2 / +4.
    */
   studio: {
     heading: 'THE STU',
@@ -117,8 +99,6 @@ export const site = {
         shade: 0.6,
         skew: 0.7,
         indent: 0,
-        /* The eyes sit high and right of centre — a dead-centre crop puts the
-           frame edge through them. */
         objectPosition: '56% 38%',
         href: null as string | null,
       },
@@ -140,41 +120,25 @@ export const site = {
   experience: {
     heading: 'EXPERIENCE',
     items: [
-      { period: '2023 – Present', role: 'Graphic Designer', company: 'Freelance' },
-      { period: '2024 – 2025', role: 'Graphic Designer & Illustrator', company: 'Macbease Inc' },
+      { period: 'July 2023 – Present', role: 'Platform Operations & Content Specialist', company: 'MMU Reviews' },
+      { period: 'Feb 2022 – June 2023', role: 'Logistics Operations Associate', company: 'BlackBuck (Zinka Logistics)' },
+      { period: 'July 2019 – Dec 2021', role: 'Retail Operations & Customer Support Executive', company: 'Hatsun Agro Product' },
     ],
   },
 
   /**
-   * The last page. The giant heading IS the button — there is no separate
-   * rectangular CTA, the typography is the interface.
-   *
-   * `href: null` means the CTA acknowledges the click (the heading flips to
-   * `acknowledged` for a beat) but goes nowhere yet. Set a mailto:, a Calendly
-   * URL, or a contact route and it becomes a real link with the same
-   * behaviour. Same rule for the social row: null renders as a muted label
-   * holding the composition; a real URL turns it into a link. No invented
-   * destinations.
+   * The last page.
    */
   footer: {
     heading: "Let's connect",
     acknowledged: 'See you there',
-    sub: 'Have an idea, a project, or simply want to say hello?',
-    /** The ask goes to the inbox. Swap for a Calendly or contact route later. */
-    href: 'mailto:kolligireeshkumarreddy@gmail.com',
-    marquee: ['GIREESH', 'DESIGNER', 'CREATIVE'],
-    /**
-     * URLs are the canonical profile paths — the `igsi` and `utm_source=share_via`
-     * parameters the share sheet appends are tracking artefacts, not part of the
-     * address, and they resolve identically without them.
-     *
-     * A `null` href renders as a muted label rather than a link, so add Behance
-     * or a portfolio here the moment you have one and it lights up on its own.
-     */
+    sub: 'Have an operational query, platform project, or simply want to connect?',
+    /** The ask goes to your inbox. */
+    href: 'mailto:usamavj100@gmail.com',
+    marquee: ['USAMA', 'OPERATIONS', 'ANALYTICS'],
     links: [
-      { label: 'LinkedIn', href: 'https://www.linkedin.com/in/gireesh-kumar-reddy-kolli-' as string | null },
-      { label: 'Instagram', href: 'https://www.instagram.com/itsgireeshreddy' as string | null },
-      { label: 'Email', href: 'mailto:kolligireeshkumarreddy@gmail.com' as string | null },
+      { label: 'Email', href: 'mailto:usamavj100@gmail.com' as string | null },
+      { label: 'Phone', href: 'tel:7418392576' as string | null },
     ],
   },
 } as const
