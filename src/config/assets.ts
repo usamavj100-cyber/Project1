@@ -1,6 +1,14 @@
 export const assets = {
   avatar: "/assets/profile.jpg",
   signature: "/assets/signature.png",
+
+  heroFace: {
+    flat: "/assets/face/flat.png",
+    layers: [
+      "/assets/face/layer-1.png",
+      "/assets/face/layer-2.png",
+    ],
+  },
   
   hero: {
     name: "Mohammed Usama M",
@@ -56,5 +64,5 @@ export const assets = {
     },
   ],
 
-  languages: ["English", "Hindi", "Tamil", "Telugu"],
+  languages: ["English", "Tamil", "Telugu"],
 };
