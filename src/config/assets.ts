@@ -4,10 +4,12 @@ export const assets = {
 
   heroFace: {
     flat: "/assets/face/flat.png",
-    layers: [
-      "/assets/face/layer-1.png",
-      "/assets/face/layer-2.png",
-    ],
+    layers: {
+      base: "/assets/face/layer-1.png",
+      eyes: "/assets/face/layer-2.png",
+      brows: "/assets/face/layer-3.png",
+      mouth: "/assets/face/layer-4.png",
+    },
   },
   
   hero: {
