@@ -2,6 +2,12 @@ export const assets = {
   avatar: "/assets/profile.jpg",
   signature: "/assets/signature.png",
 
+  frame: {
+    video: "/assets/video.mp4",
+    poster: "/assets/poster.jpg",
+    image: "/assets/profile.jpg",
+  },
+
   heroFace: {
     flat: "/assets/face/flat.png",
     layers: {
