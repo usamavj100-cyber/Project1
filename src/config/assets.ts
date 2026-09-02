@@ -9,6 +9,7 @@ export const assets = {
       eyes: "/assets/face/layer-2.png",
       brows: "/assets/face/layer-3.png",
       mouth: "/assets/face/layer-4.png",
+      lids: "/assets/face/layer-5.png",
     },
   },
   
