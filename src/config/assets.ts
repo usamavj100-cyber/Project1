@@ -13,113 +13,61 @@
  */
 
 export const assets = {
-  /**
-   * Hero face illustration living inside the word PORTFOLIO.
-   *
-   * `layers` is the preferred hand-off: export the illustration as four
-   * transparent PNG/SVGs sharing ONE canvas (same width/height, nothing
-   * re-cropped) and the blink / smile / eye-dart rig drives them directly.
-   *
-   *   base   — head, hair, brows, nose, beard. Everything that never moves.
-   *   eyes   — the eye whites + irises only.
-   *   lids   — the eyelid shape used for the blink (drawn over `eyes`).
-   *   mouth  — neutral mouth only; the smile is a transform of this layer.
-   *
-   * `flat` is the fallback: a single image. It renders perfectly but can only
-   * breathe (micro parallax + drift) — it cannot blink.
-   */
-  heroFace: {
-    flat: null as string | null,
-    layers: null as { base: string; eyes: string; lids: string; mouth: string } | null,
+  avatar: "/assets/profile.jpg",
+  
+  hero: {
+    name: "Mohammed Usama M",
+    role: "Operations & Platform Specialist",
+    summary: "Performance-driven Operations Specialist with over 4 years of experience combining YouTube platform management with high-speed logistics data support.",
+    location: "Bengaluru, India",
+    email: "usamavj100@gmail.com",
+    phone: "7418392576",
   },
 
-  /**
-   * Section 02, left frame.
-   *
-   * A video wins over a still; the frame's geometry comes from tokens.ts
-   * either way, so swapping between them moves nothing on the page. To change
-   * the artwork later, change `video` (and regenerate `poster` from its first
-   * frame) — nothing else on the site refers to the file.
-   *
-   * The current clip is 720 x 1280 and the frame is 144 : 335, so `cover`
-   * trims about 12% off each side — empty backdrop either side of the figure,
-   * and the full head-to-feet height is kept.
-   */
-  frame: {
-    video: '/assets/videos/frame-artwork.mp4' as string | null,
-    poster: '/assets/videos/frame-artwork-poster.jpg' as string | null,
-    image: null as string | null,
-    fit: 'cover' as 'cover' | 'contain',
-    /** The figure drifts between 50% and 56% across the clip. */
-    position: '52% 50%',
-    /**
-     * The luminance band over which the clip's own backdrop dissolves into the
-     * paper, so the page's real ruling and creases show through around the
-     * figure instead of a video rectangle.
-     *
-     * Measured off this footage, not guessed: skin peaks at 0.567 and the
-     * darkest backdrop is 0.782, which leaves a wide, safe gap. Re-measure if
-     * you change the clip — sample the brightest part of the subject and the
-     * darkest part of its background, and put the band between them. Set to
-     * `null` for footage that already carries an alpha channel.
-     */
-    key: { low: 0.62, high: 0.78 } as { low: number; high: number } | null,
+  about: {
+    title: "About Me",
+    description: "On the digital media side, I manage end-to-end channel workflows, ensure strict policy compliance, and optimize platform visibility. On the logistics side, I manage 200+ CRM records daily and resolve 60+ critical support tickets while consistently exceeding targets by 130%.",
   },
 
-  /**
-   * Cut-out bust for the black strip, standing in front of the moving type.
-   *
-   * Supply a transparent PNG — the surroundings must be transparent, not
-   * white, or the letters will be covered by a rectangle instead of passing
-   * behind the body.
-   *
-   * `sticker` generates the reference's red die-cut edge from the image's own
-   * alpha. Turn it off if the artwork you supply already carries its own
-   * outline or red treatment, so it does not get a second one.
-   */
-  nameCutout: {
-    src: '/assets/name-cutout.webp' as string | null,
-    /**
-     * The asset's own pixel size, so the box is reserved before the file
-     * arrives. Without it a lazily-loaded `h-auto` image deadlocks: no
-     * reserved height means the browser never counts it as near the viewport,
-     * so it never loads, so it never gets a height. `tools/extract-cutout.py`
-     * prints these on every run.
-     */
-    width: 1076,
-    height: 1121,
-    sticker: true,
-  },
+  skills: [
+    "Platform Operations & Asset Management",
+    "Logistics Data & CRM Infrastructure",
+    "Advanced SEO & Metadata Architecture",
+    "Policy Compliance & Risk Mitigation",
+    "High-Impact Performance Analytics",
+    "Workflow Optimization",
+    "Supply Chain Consultation",
+    "Quality Assurance Governance"
+  ],
 
-  /**
-   * Small round avatar inside the floating contact note.
-   *
-   * Cropped from the same studio portrait the section-03 cut-out came from —
-   * head centred, a little wider than the skull so the face still reads at
-   * 48px. The original backdrop is kept rather than the transparent cut-out:
-   * inside a 48px circle a floating head on a beige disc reads as a mistake,
-   * a photograph reads as a photograph.
-   */
-  avatar: '/assets/avatar.webp' as string | null,
+  experience: [
+    {
+      company: "MMU Reviews",
+      role: "Platform Operations & Content Specialist",
+      period: "July 2023 - Present",
+      description: "Manage end-to-end digital content workflows, optimize metadata strategies, and analyze CTR and audience retention curves on YouTube.",
+    },
+    {
+      company: "BlackBuck (Zinka Logistics)",
+      role: "Logistics Operations Associate",
+      period: "Feb 2022 - June 2023",
+      description: "Managed 200+ service records daily in CRM, resolved 60+ support tickets daily, and coordinated supply chain operations.",
+    },
+    {
+      company: "Hatsun Agro Product",
+      role: "Retail Operations & Support Executive",
+      period: "July 2019 - Dec 2021",
+      description: "Managed inventory data, reduced stock discrepancies, and delivered direct technical and operational customer support.",
+    },
+  ],
 
-  /**
-   * THE STU — three photographs, left to right. Drop files into
-   * /public/assets/projects/ and list them here.
-   *
-   * The Polaroid geometry is fixed by the card, not by the image: 1.24
-   * landscape, cropped with object-fit: cover. Nudge `objectPosition` in
-   * site.studio.items if a subject sits off centre.
-   */
-  studio: [
-    '/assets/projects/studio-01.webp',
-    '/assets/projects/studio-02.webp',
-    '/assets/projects/studio-03.webp',
-  ] as (string | null)[],
+  education: [
+    {
+      degree: "B.Sc. Software Computer Science",
+      institution: "Islamiah College (Thiruvalluvar University)",
+      period: "2016 - 2019",
+    },
+  ],
 
-  /**
-   * Signature graphic for the footer — the designer signing the last page.
-   * Until it arrives, the name is set in the hand font with a red tick, so
-   * the page is already signed and the slot already has its place.
-   */
-  signature: null as string | null,
-} as const
+  languages: ["English", "Hindi", "Tamil", "Telugu"],
+};
