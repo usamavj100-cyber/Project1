@@ -1,19 +1,6 @@
-/**
- * ---------------------------------------------------------------------------
- * ASSET REGISTRY
- * ---------------------------------------------------------------------------
- * One place to swap placeholders for finals. Every entry is `null` today; the
- * component that consumes it already reserves the exact box the real asset
- * will occupy, so setting a path here changes pixels, never layout.
- *
- *   1. Drop the file into /public/assets/…
- *   2. Set the path below.
- *   3. Done. No component edits, no reflow.
- * ---------------------------------------------------------------------------
- */
-
 export const assets = {
   avatar: "/assets/profile.jpg",
+  signature: "/assets/signature.png",
   
   hero: {
     name: "Mohammed Usama M",
