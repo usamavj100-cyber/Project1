@@ -6,6 +6,9 @@ export const assets = {
     video: "/assets/video.mp4",
     poster: "/assets/poster.jpg",
     image: "/assets/profile.jpg",
+    fit: "cover",
+    position: "center",
+    key: "intro-frame",
   },
 
   heroFace: {
